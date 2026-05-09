@@ -1,10 +1,13 @@
 import os
+
+from dotenv import load_dotenv
 from sqlmodel import Session, create_engine, SQLModel
 from fastapi import FastAPI, Depends
 from typing import Annotated
 
-
-engine = create_engine()
+load_dotenv()
+database_url = os.environ.get("DATABASE_URL")
+engine = create_engine(database_url)
 
 def create_all_tables(app: FastAPI):
     if os.getenv("ENV") == "dev":

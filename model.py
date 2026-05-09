@@ -13,7 +13,7 @@ class Dog(SQLModel, table = True):
     breed: str
     created: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
-class Sticker(SQLModel, table = True):
+"""class Sticker(SQLModel, table = True):
     __tablename__ = "stickers"
 
     created: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
@@ -22,4 +22,4 @@ class Sticker(SQLModel, table = True):
 class Book(SQLModel, table = True):
     __tablename__ = "books"
 
-    created: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    created: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))"""
